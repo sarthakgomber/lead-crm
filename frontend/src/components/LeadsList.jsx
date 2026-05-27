@@ -20,7 +20,7 @@ export const LeadsList = ({ leads, loading, onUpdateStatus, onDelete }) => {
       <div className="ll__header">
         <div className="ll__title-row">
           <div>
-            <div className="ll__tag">// LEADS</div>
+            <div className="ll__tag">{'// LEADS'}</div>
             <h2 className="ll__title">
               {loading ? 'Loading...' : `${filtered.length} ${filtered.length === 1 ? 'record' : 'records'}`}
             </h2>

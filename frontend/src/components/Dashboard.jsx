@@ -60,7 +60,7 @@ export const Dashboard = ({ stats }) => {
   return (
     <div className="dashboard">
       <div className="dashboard__header">
-        <span className="dashboard__tag">// OVERVIEW</span>
+        <span className="dashboard__tag">{'// OVERVIEW'}</span>
       </div>
       <div className="dashboard__grid">
         {cards.map((c) => <StatCard key={c.label} {...c} />)}

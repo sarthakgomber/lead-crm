@@ -67,7 +67,7 @@ export default function App() {
 
       <footer className="app-footer">
         <div className="container">
-          <span className="app-footer__text">// LEAD CRM — Sankar Group Assignment</span>
+          <span className="app-footer__text">{'// LEAD CRM — Sankar Group Assignment'}</span>
           <span className="app-footer__status">
             <span className="app-footer__dot" />
             System Online

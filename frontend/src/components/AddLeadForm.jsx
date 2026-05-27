@@ -44,7 +44,7 @@ export const AddLeadForm = ({ onAdd, onClose }) => {
     <div className="form-wrap fade-in">
       <div className="form-header">
         <div>
-          <div className="form-tag">// NEW ENTRY</div>
+          <div className="form-tag">{'// NEW ENTRY'}</div>
           <h2 className="form-title">Add Lead</h2>
         </div>
         {onClose && (
