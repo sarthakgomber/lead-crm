@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { leadsApi } from '../api/leads';
 
-export const useLeads = (filters = {}) => {
+export const useLeads = () => {
   const [leads, setLeads] = useState([]);
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -12,7 +12,7 @@ export const useLeads = (filters = {}) => {
       setLoading(true);
       setError(null);
       const [leadsRes, statsRes] = await Promise.all([
-        leadsApi.getAll(filters),
+        leadsApi.getAll(),
         leadsApi.getStats(),
       ]);
       setLeads(leadsRes.data.data);
@@ -22,7 +22,7 @@ export const useLeads = (filters = {}) => {
     } finally {
       setLoading(false);
     }
-  }, [JSON.stringify(filters)]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => { fetchLeads(); }, [fetchLeads]);
 
